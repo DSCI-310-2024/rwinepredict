@@ -19,3 +19,5 @@ Imports:
     dplyr,
     tibble,
     tidyr
+URL: https://github.com/diaazavery/rwinepredict
+BugReports: https://github.com/diaazavery/rwinepredict/issues
