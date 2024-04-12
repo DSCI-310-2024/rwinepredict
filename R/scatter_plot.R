@@ -7,6 +7,7 @@
 #' @param y_label The name for the y-axis label
 #'
 #' @return A ggplot object
+#' @import ggplot2
 #' @export
 
 scatter_plot <- function(data, x_var, y_var, title = NULL, x_label = NULL, y_label = NULL) {

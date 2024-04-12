@@ -19,8 +19,8 @@ Suggests:
 Config/testthat/edition: 3
 Imports: 
     dplyr,
+    ggplot2,
     tibble,
-    tidyr,
-    ggplot2
+    tidyr
 BugReports: https://github.com/diaazavery/rwinepredict/issues
 VignetteBuilder: knitr
