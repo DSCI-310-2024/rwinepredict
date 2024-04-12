@@ -1,16 +1,17 @@
 Package: rwinepredict
 Type: Package
-Title: Simplifies Exploratory data analysis
+Title: Assists with exploratory data analysis
 Version: 0.1.0
-Author: person("Felix", "Li", , "felix2431876946@outlook.com", role = c("aut"))
-    person("Gurman", "Gill", , "gurmangill125@gmail.com", role = c("aut"))
-    person("Dia", "Zavery", , "diazavery6@gmail.com", role = c("aut", "cre"))
-    person("Steve", "He", , "hejunjie20020916@gmail.com", role = c("aut"))
-Description: Includes 4 functions that aid in exploratory data analysis. These include data cleaning, converting a column to a binary classification and generating eda plots. 
-    This package was created for eda to select variables that best predict wine quality.
+Authors@R:c(
+    person("Felix", "Li", , "felix2431876946@outlook.com", role = c"aut"),
+    person("Gurman", "Gill", , "gurmangill125@gmail.com", role = "aut"),
+    person("Dia", "Zavery", , "diazavery6@gmail.com", role = c("aut", "cre")),
+    person("Steve", "He", , "hejunjie20020916@gmail.com", role ="aut"))
+Description: This package provides tools for exploratory data analysis for building
+    and deciding models. The package includes functions to clean the data,
+    create visualizations, and transform numerical variables into binary classes.
 License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
 RoxygenNote: 7.3.1
 Suggests: 
     knitr,
@@ -19,8 +20,7 @@ Suggests:
 Config/testthat/edition: 3
 Imports: 
     dplyr,
-    ggplot2,
     tibble,
-    tidyr
-BugReports: https://github.com/diaazavery/rwinepredict/issues
+    tidyr,
+    ggplot2
 VignetteBuilder: knitr
