@@ -25,7 +25,7 @@ We introduce the core functions of rwinepredict:
 This package was created for selecting factors that offer the best prediction for wine quality found in
 <https://github.com/DSCI-310-2024/DSCI_310_Group_6_wine_quality_predictors>
 
-he rwinepredict package, designed for R version 4.3.2 and above, simplifies wine data analysis and visualization seamlessly. It relies on essential dependencies like tibble, ggplot2, and tidyverse to efficiently manage data frames, create powerful visualizations, and manipulate data effortlessly. The package's standout feature is its ability to streamline workflows by eliminating intermediate steps, allowing users to generate graphs or clean data with just one function call. You can follow the tutorial below that walks you through the four key functions associated with this package. 
+The rwinepredict package, designed for R version 4.3.2 and above, simplifies wine data analysis and visualization seamlessly. It relies on essential dependencies like tibble, ggplot2, and tidyverse to efficiently manage data frames, create powerful visualizations, and manipulate data effortlessly. The package's standout feature is its ability to streamline workflows by eliminating intermediate steps, allowing users to generate graphs or clean data with just one function call. You can follow the tutorial below that walks you through the four key functions associated with this package. 
 
 Once you have installed the packages, load the library:
 ```{r setup}
