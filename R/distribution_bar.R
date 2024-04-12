@@ -7,6 +7,7 @@
 #' @param x unquoted column name to plot on the x-axis from data data_frame or tibble
 #'
 #' @return A ggplot object
+#' @importFrom ggplot2 ggplot
 #' @export
 #'
 distribution_bar <- function(data, x, title = NULL, x_label = NULL, y_label = NULL) {
