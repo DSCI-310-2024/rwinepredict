@@ -1,3 +1,4 @@
+[![codecov](https://codecov.io/gh/DSCI-310-2024/rwinepredict/graph/badge.svg?token=P4yfmXgKko)](https://codecov.io/gh/DSCI-310-2024/rwinepredict)
 # rwinepredict
 
 The goal of rwinepredict is to provide functions that help with the data analysis of explore the predictive relationships between the physicochemical properties of wine and its quality using wine data.
