@@ -2,10 +2,10 @@ Package: rwinepredict
 Type: Package
 Title: What the Package Does (Title Case)
 Version: 0.1.0
-Author: person("Felix", "Li", , "jane@example.com", role = c("aut", "cre"))
-    person("Gurman", "Gill", , "jane@example.com", role = c("aut", "cre"))
+Author: person("Felix", "Li", , "felix2431876946@outlook.com", role = c("aut", "cre"))
+    person("Gurman", "Gill", , "gurmangill125@gmail.com", role = c("aut", "cre"))
     person("Dia", "Zavery", , "diazavery6@gmail.com", role = c("aut", "cre"))
-    person("Steve", "He", , "jane@example.com", role = c("aut", "cre"))
+    person("Steve", "He", , "hejunjie20020916@gmail.com", role = c("aut", "cre"))
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
 License: MIT + file LICENSE
@@ -13,6 +13,8 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.1
 Suggests: 
+    knitr,
+    rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Imports: 
@@ -22,3 +24,4 @@ Imports:
     ggplot2
 URL: https://github.com/diaazavery/rwinepredict
 BugReports: https://github.com/diaazavery/rwinepredict/issues
+VignetteBuilder: knitr
