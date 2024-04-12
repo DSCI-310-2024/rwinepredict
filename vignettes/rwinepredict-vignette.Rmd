@@ -1,0 +1,105 @@
+---
+title: "rwinepredict-vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{rwinepredict-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+The rwinepredict package is designed to streamline the initial stages of wine quality analysis using linear modeling. By providing a suite of functions that assist with exploratory data analysis, rwinepredict ensures a thorough understanding of dataset characteristics and the relationships between variables, particularly when dealing with high correlation. The package's utilities range from data cleaning to visualization, making it a valuable tool in the preparation phase of predictive modeling.
+
+We introduce the core functions of rwinepredict:
+
+- Data cleaning and preparation
+- Binary classification of numerical variables
+- Visualizations for exploratory analysis
+
+This package was created for selecting factors that offer the best prediction for wine quality found in
+<https://github.com/DSCI-310-2024/DSCI_310_Group_6_wine_quality_predictors>
+
+he rwinepredict package, designed for R version 4.3.2 and above, simplifies wine data analysis and visualization seamlessly. It relies on essential dependencies like tibble, ggplot2, and tidyverse to efficiently manage data frames, create powerful visualizations, and manipulate data effortlessly. The package's standout feature is its ability to streamline workflows by eliminating intermediate steps, allowing users to generate graphs or clean data with just one function call. You can follow the tutorial below that walks you through the four key functions associated with this package. 
+
+Once you have installed the packages, load the library:
+```{r setup}
+library(rwinepredict)
+```
+
+## 1. clean_data()
+Data cleaning and preprocessing is a critical first step in any data analysis workflow. The clean_wine_data() function simplifies this process specifically for wine datasets. This function not only removes NA values but also scales numeric columns and converts the target column into a factor, preparing the dataset for further analysis.
+
+The function accepts two parameters:
+
+- data: A dataframe containing the wine dataset to be cleaned.
+- target_col: The name of the target column in the dataset that you want to convert to a factor
+
+Below we will show an example of how to use the function through the 'winequality-red.csv' dataset that can be found [here](https://github.com/kirenz/datasets/blob/master/winequality-red.csv) 
+
+```{r}
+dataset_url <- "https://raw.githubusercontent.com/kirenz/datasets/master/winequality-red.csv"
+
+wine_data <- read.csv(dataset_url, header = TRUE, sep = ";")
+
+target_column <- "quality"
+
+cleaned_wine_data <- clean_wine_data(wine_data, target_col = target_column)
+
+head(cleaned_wine_data)
+```
+
+## 2. distribution_bar()
+Visualization is key to understanding the distribution of variables in your dataset. The distribution_bar() function creates a bar chart to display the frequency of each category within a variable.
+
+Parameters:
+- data: Your dataset as a data frame or tibble.
+- x: The unquoted name of the column you want to plot on the x-axis.
+
+Here's how you can visualize the distribution of the 'quality' variable from the winequality dataset:
+
+```{r}
+dist_plot <- distribution_bar(wine_data, x = "quality", 
+                              title = "Distribution of Wine Quality", 
+                              x_label = "Quality", 
+                              y_label = "Frequency")
+print(dist_plot)
+```
+
+## 3. quality()
+Transforming numerical data into categorical data can provide more intuitive insights during your analysis. The quality() function converts numerical scores in a column of your dataframe into categorical values, "bad" or "good".
+
+Parameters:
+- data: A dataframe containing a 'quality' column.
+
+Here's an example that demonstrates how to apply this transformation:
+
+```{r}
+transformed_data <- quality(wine_data)
+head(transformed_data)
+```
+
+## 4. scatter_plot()
+Understanding the relationship between two variables is essential in many analyses. The scatter_plot() function generates a scatter plot for this purpose, providing a visual means to detect patterns, trends, or outliers between two quantitative variables.
+
+Parameters:
+data: A data frame containing your dataset.
+x_var: The column name for the x-axis variable.
+y_var: The column name for the y-axis variable.
+x_label: Label for the x-axis.
+y_label: Label for the y-axis.
+
+Find an example below to explore the relationship between 'alcohol' content and 'quality':
+
+```{r}
+scatter <- scatter_plot(wine_data, x_var = "alcohol", y_var = "quality", 
+             title = "Alcohol Content vs. Wine Quality", 
+             x_label = "Alcohol (%)", 
+             y_label = "Quality")
+scatter
+```
