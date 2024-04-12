@@ -1,13 +1,13 @@
 Package: rwinepredict
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Simplifies Exploratory data analysis
 Version: 0.1.0
-Author: person("Felix", "Li", , "felix2431876946@outlook.com", role = c("aut", "cre"))
-    person("Gurman", "Gill", , "gurmangill125@gmail.com", role = c("aut", "cre"))
+Author: person("Felix", "Li", , "felix2431876946@outlook.com", role = c("aut"))
+    person("Gurman", "Gill", , "gurmangill125@gmail.com", role = c("aut"))
     person("Dia", "Zavery", , "diazavery6@gmail.com", role = c("aut", "cre"))
-    person("Steve", "He", , "hejunjie20020916@gmail.com", role = c("aut", "cre"))
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+    person("Steve", "He", , "hejunjie20020916@gmail.com", role = c("aut"))
+Description: Includes 4 functions that aid in exploratory data analysis. These include data cleaning, converting a column to a binary classification and generating eda plots. 
+    This package was created for eda to select variables that best predict wine quality.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -22,6 +22,5 @@ Imports:
     tibble,
     tidyr,
     ggplot2
-URL: https://github.com/diaazavery/rwinepredict
 BugReports: https://github.com/diaazavery/rwinepredict/issues
 VignetteBuilder: knitr
